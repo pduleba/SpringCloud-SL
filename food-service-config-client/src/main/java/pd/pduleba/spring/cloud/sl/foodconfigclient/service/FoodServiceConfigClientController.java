@@ -2,7 +2,6 @@ package pd.pduleba.spring.cloud.sl.foodconfigclient.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import pd.pduleba.spring.cloud.sl.foodconfigclient.FoodServiceConfigClientConfiguration;
@@ -15,8 +14,8 @@ public class FoodServiceConfigClientController {
 	@Value("${some.other.property}")
 	private String someOtherProperty;
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String configuration() {
+	@RequestMapping
+	public String printConfig() {
 		StringBuffer response = new StringBuffer();
 		response.append(" fromBean = ");
 		response.append(configuration.getProperty());

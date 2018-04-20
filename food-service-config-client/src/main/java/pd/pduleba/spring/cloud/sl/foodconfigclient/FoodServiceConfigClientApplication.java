@@ -6,9 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class FoodConfigClientApplication {
+public class FoodServiceConfigClientApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FoodConfigClientApplication.class, args);
+		SpringApplication.run(FoodServiceConfigClientApplication.class, args);
 	}
 }
