@@ -23,7 +23,7 @@ public class FoodServiceConfigClientApplication {
 		SpringApplication.run(FoodServiceConfigClientApplication.class, args);
 	}
 
-	@RequestMapping("/")
+	@RequestMapping
 	public String printConfig() {
 		StringBuffer response = new StringBuffer();
 		response.append(configuration.getProperty());
