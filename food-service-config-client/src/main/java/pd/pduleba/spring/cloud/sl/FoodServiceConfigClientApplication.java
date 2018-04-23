@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -23,7 +24,7 @@ public class FoodServiceConfigClientApplication {
 		SpringApplication.run(FoodServiceConfigClientApplication.class, args);
 	}
 
-	@RequestMapping("/")
+	@RequestMapping(method = RequestMethod.GET)
 	public String printConfig() {
 		StringBuffer response = new StringBuffer();
 		response.append(configuration.getProperty());
