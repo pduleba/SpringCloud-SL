@@ -24,7 +24,7 @@ public class FoodServiceConfigClientApplication {
 		SpringApplication.run(FoodServiceConfigClientApplication.class, args);
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(path = "printConfig", method = RequestMethod.GET)
 	public String printConfig() {
 		StringBuffer response = new StringBuffer();
 		response.append(configuration.getProperty());
