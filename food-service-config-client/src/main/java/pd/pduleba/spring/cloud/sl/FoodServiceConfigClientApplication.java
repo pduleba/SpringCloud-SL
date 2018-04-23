@@ -26,9 +26,8 @@ public class FoodServiceConfigClientApplication {
 	@RequestMapping("/")
 	public String printConfig() {
 		StringBuffer response = new StringBuffer();
-		response.append(" some.property = ");
 		response.append(configuration.getProperty());
-		response.append(" some.other.property = ");
+		response.append(" || ");
 		response.append(someOtherProperty);
 
 		return response.toString();
