@@ -3,6 +3,7 @@ package pd.pduleba.spring.cloud.sl.inorderservice;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ public class InOrderServiceApplication {
 	}
 
 	@RequestMapping
-	public String inOrder() {
-		return "In order in progress...";
+	public String inOrder(@RequestHeader("x-location") String location) {
+		return "In order in progress... at " + location;
 	}
 }
