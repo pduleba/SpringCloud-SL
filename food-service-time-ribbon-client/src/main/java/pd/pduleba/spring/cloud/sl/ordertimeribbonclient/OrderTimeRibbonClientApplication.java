@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
-@RibbonClient(name = "food-service-time-server")
+import pd.pduleba.spring.cloud.sl.ordertimeribbonclient.service.FoodServiceTimeRibbonClientConfig;
+
+@RibbonClient(name = "food-service-time-server", configuration = FoodServiceTimeRibbonClientConfig.class)
 @SpringBootApplication
 public class OrderTimeRibbonClientApplication {
 
