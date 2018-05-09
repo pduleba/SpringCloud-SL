@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.netflix.servo.jsr166e.ThreadLocalRandom;
 
 @RestController
-public class WeatherService {
+public class WeatherServerService {
 
 	private String[] weather = new String[] { "sunny", "cloudy", "rainy", "windy" };
 
 	@GetMapping("/weather") // nice shortcut
-	public String getTime() {
+	public String getWeather() {
 		int index = ThreadLocalRandom.current().nextInt(0, weather.length);
 		return weather[index];
 	}
