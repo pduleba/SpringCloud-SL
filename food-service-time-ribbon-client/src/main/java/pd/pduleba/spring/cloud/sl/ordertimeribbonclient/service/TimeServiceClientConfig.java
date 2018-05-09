@@ -9,7 +9,7 @@ import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
 
 @Configuration
-public class FoodServiceTimeRibbonClientConfig {
+public class TimeServiceClientConfig {
 
 	@Bean
 	@LoadBalanced
